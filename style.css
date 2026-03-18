@@ -64,4 +64,172 @@ font-size: 18px;
     object-fit: cover;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: #964b00;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #a0603a;
+}
+
+.card_text {
+  padding: 15px 20px;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+  color: #ffd700;
+}
+
+.card p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.card ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.card li {
+  margin-bottom: 5px;
+}
+
+
+.card button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background-color: #ffa500;
+}
+
+
+section button {
+  background-color: #8b4a2b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+section button:hover {
+  background-color: #a0603a;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #ffd700;
+  margin: 40px 0 20px 0;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+
+section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff8c00; 
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+
+.chto_myu_predlagaem h1 {
+  color: #f0e68c;
+}
+
+.chto_myu_predlagaem h1::after {
+  background: #daa520;
+}
+
+
+.blijashie_meropriatiya h1 {
+  color: #ffdead;
+}
+
+.blijashie_meropriatiya h1::after {
+  background: #cd853f;
+}
+
+
+.nash_assortiment h1 {
+  color: #faebd7;
+}
+
+.nash_assortiment h1::after {
+  background: #8b4513;
+}
+
+section h1:hover {
+  color: #fff;
+  text-shadow:
+    0 0 10px rgba(255, 215, 0, 0.5),
+    2px 2px 5px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
