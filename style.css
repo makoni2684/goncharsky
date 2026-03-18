@@ -491,3 +491,81 @@ color: #888;
 font-size: 0.9rem;
 text-align: right;
 }
+
+.bloc_zapisi {
+background-color: #a0603a;
+padding: 60px 0;
+color: white;
+}
+
+.zapisi_top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 40px;
+}
+
+.zapisi_left {
+width: 60%;
+}
+
+.zapisi_left h1 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.zapisi_left p {
+font-size: 20px;
+line-height: 1.5;
+}
+
+.zapisi_right {
+width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.btn_big {
+background: #ff8c42;
+border: none;
+padding: 25px 70px;
+font-size: 26px; 
+border-radius: 50px;
+cursor: pointer;
+color: white;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.btn_big:hover {
+background: #ff9f5a;
+transform: scale(1.05);
+}
+
+
+.zapisi_bottom {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.contacts_left p {
+margin: 5px 0;
+}
+
+.contacts_right {
+text-align: right;
+}
+
+.btn_small {
+margin-top: 10px;
+background: #333;
+color: white;
+border: none;
+padding: 8px 15px;
+border-radius: 8px;
+cursor: pointer;
+}
+
+
