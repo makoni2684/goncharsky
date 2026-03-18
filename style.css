@@ -156,6 +156,63 @@ section button:hover {
   background-color: #a0603a;
 }
 
+section h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #ffd700;
+  margin: 40px 0 20px 0;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+
+section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff8c00; 
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+
+.chto_myu_predlagaem h1 {
+  color: #f0e68c;
+}
+
+.chto_myu_predlagaem h1::after {
+  background: #daa520;
+}
+
+
+.blijashie_meropriatiya h1 {
+  color: #ffdead;
+}
+
+.blijashie_meropriatiya h1::after {
+  background: #cd853f;
+}
+
+
+.nash_assortiment h1 {
+  color: #faebd7;
+}
+
+.nash_assortiment h1::after {
+  background: #8b4513;
+}
+
+section h1:hover {
+  color: #fff;
+  text-shadow:
+    0 0 10px rgba(255, 215, 0, 0.5),
+    2px 2px 5px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
 
 
 
