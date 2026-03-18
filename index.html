@@ -28,10 +28,12 @@
         </div>
     </header>
     <section class="banner">
-        <div class="slider">
-            <button class="left click">&#8592;</button>
-            <img src="img/banner_1.jpg" alt="баннер">
-            <button class="right click">&#8594;</button>
+        <div class="container">
+            <div class="slider">
+                <button class="left click">&#8592;</button>
+                <img src="img/banner_1.jpg" alt="баннер">
+                <button class="right click">&#8594;</button>
+            </div>
         </div>
     </section>
     <section class="o_nas">
@@ -237,5 +239,40 @@
         </div>
     </div>
 </section>
+
+<script>
+
+const images = [
+"img/banner_1.jpg",
+"img/banner_2.jpg",
+"img/banner_3.jpg",
+"img/banner_4.jpg"
+];
+
+let index = 0;
+
+const banner = document.querySelector(".slider img");
+
+document.querySelector(".right").onclick = () => {
+index++;
+
+if(index >= images.length){
+index = 0;
+}
+
+banner.src = images[index];
+}
+
+document.querySelector(".left").onclick = () => {
+index--;
+
+if(index < 0){
+index = images.length - 1;
+}
+
+banner.src = images[index];
+}
+
+</script>
 </body>
 </html>
