@@ -568,4 +568,55 @@ border-radius: 8px;
 cursor: pointer;
 }
 
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Отступ между логотипом и колонками */
+}
+
+.logo-container {
+    flex: 1; /* Занимает доступную ширину */
+    text-align: left; /* Выравнивание логотипа по левому краю */
+}
+
+.footer-logo {
+    max-width: 200px; /* Ограничиваем максимальную ширину логотипа */
+    height: auto; /* Сохраняем пропорции */
+}
+
+.footer-cols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+    .col a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+    }
+
+        .col a:hover {
+            text-decoration: underline;
+            color: #ff9500;
+        }
 
