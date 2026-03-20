@@ -620,3 +620,82 @@ cursor: pointer;
             color: #ff9500;
         }
 
+.about_us {
+    padding: 80px 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+    .about_us .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .about_us .text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about_us p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    .about_us h3 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #8B4513; /* Тёплый коричневый оттенок, ассоциируется с глиной */
+        margin: 40px 0 20px 0;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+        /* Декоративная линия под заголовками */
+        .about_us h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #D2B48C; /* Бежевый оттенок, цвет керамики */
+        }
+
+    .about_us ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 20px 0;
+    }
+
+    .about_us li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+        /* Кастомные маркеры для пунктов списка */
+        .about_us li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #A0522D; /* Коричневый цвет для маркеров */
+            font-weight: bold;
+        }
+
+    /* Стили для последнего абзаца — делаем его более выразительным */
+    .about_us .text p:last-of-type {
+        font-style: italic;
+        background-color: #FFF8F0; /* Лёгкий бежевый фон */
+        padding: 25px;
+        border-radius: 5px;
+        border-left: 4px solid #D2B48C;
+        margin-top: 30px;
+    }
+
