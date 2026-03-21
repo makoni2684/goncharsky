@@ -812,3 +812,92 @@ border: none;
 border-radius: 10px;
 }
 
+.reviews_page {
+background: #a0603a;
+padding: 30px 0;
+}
+
+
+.reviews_list {
+height: 400px;
+overflow-y: auto;
+padding-right: 10px;
+}
+
+
+
+
+.review {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+
+.avatar {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background: #7a4a4a;
+margin-right: 20px;
+}
+
+
+.review_text {
+background: #b89e86;
+padding: 20px;
+border-radius: 10px;
+flex: 1;
+}
+
+
+
+
+.add_review {
+margin-top: 20px;
+display: flex;
+justify-content: flex-end;
+}
+
+
+.add_btn {
+background: #4a3a33;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 8px;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+}
+
+
+
+
+
+.review_form {
+background: #8b4a2b;
+padding: 30px 0;
+}
+
+
+.review_form h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+
+.review_form iframe {
+border: none;
+width: 100%;
+height: 600px;
+border-radius: 10px;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+
+
+
