@@ -585,17 +585,17 @@ cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px; /* Отступ между логотипом и колонками */
+    margin-bottom: 20px; 
 }
 
 .logo-container {
-    flex: 1; /* Занимает доступную ширину */
-    text-align: left; /* Выравнивание логотипа по левому краю */
+    flex: 1;
+    text-align: left;
 }
 
 .footer-logo {
-    max-width: 200px; /* Ограничиваем максимальную ширину логотипа */
-    height: auto; /* Сохраняем пропорции */
+    max-width: 200px; 
+    height: auto; 
 }
 
 .footer-cols {
@@ -650,13 +650,12 @@ cursor: pointer;
     .about_us h3 {
         font-size: 24px;
         font-weight: 600;
-        color: #8B4513; /* Тёплый коричневый оттенок, ассоциируется с глиной */
+        color: #8B4513; 
         margin: 40px 0 20px 0;
         position: relative;
         padding-bottom: 10px;
     }
 
-        /* Декоративная линия под заголовками */
         .about_us h3::after {
             content: '';
             position: absolute;
@@ -664,7 +663,7 @@ cursor: pointer;
             left: 0;
             width: 100%;
             height: 3px;
-            background-color: #D2B48C; /* Бежевый оттенок, цвет керамики */
+            background-color: #D2B48C;
         }
 
     .about_us ul {
@@ -680,22 +679,136 @@ cursor: pointer;
         font-size: 16px;
     }
 
-        /* Кастомные маркеры для пунктов списка */
+
         .about_us li::before {
-            content: '•';
+            content: 'пїЅ';
             position: absolute;
             left: 0;
-            color: #A0522D; /* Коричневый цвет для маркеров */
+            color: #A0522D;
             font-weight: bold;
         }
 
-    /* Стили для последнего абзаца — делаем его более выразительным */
+
     .about_us .text p:last-of-type {
         font-style: italic;
-        background-color: #FFF8F0; /* Лёгкий бежевый фон */
+        background-color: #FFF8F0;
         padding: 25px;
         border-radius: 5px;
         border-left: 4px solid #D2B48C;
         margin-top: 30px;
     }
+
+.contacts_page {
+background: #a0603a;
+padding-bottom: 50px;
+}
+
+
+
+.contacts_title {
+text-align: center;
+padding: 40px 0;
+color: white;
+}
+
+.contacts_title h1 {
+font-size: 32px;
+margin-bottom: 10px;
+}
+
+.contacts_title p {
+font-size: 20px;
+}
+
+
+
+
+
+.contacts_middle {
+display: flex;
+gap: 40px;
+margin-top: 40px;
+align-items: center;
+}
+
+
+.contacts_card {
+background: #ddd;
+color: black;
+padding: 20px;
+border-radius: 10px;
+width: 250px;
+}
+
+
+.contacts_map {
+flex: 1;
+background: #ccc;
+padding: 10px;
+border-radius: 10px;
+}
+
+
+
+
+
+.contacts_form {
+margin-top: 40px;
+color: white;
+}
+
+.contacts_form h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+
+.form_row {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.form_row label {
+width: 120px;
+font-size: 18px;
+}
+
+.form_row input {
+flex: 1;
+padding: 5px;
+border: none;
+border-bottom: 2px solid white;
+background: transparent;
+color: white;
+}
+
+
+.send_btn {
+margin-top: 10px;
+background: black;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.google_form_block {
+margin-top: 40px;
+margin-bottom: 40px;
+color: white;
+}
+
+.google_form_block h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.google_form_block iframe {
+width: 100%;
+height: 700px;
+border: none;
+border-radius: 10px;
+}
 
