@@ -898,6 +898,10 @@ html {
 scroll-behavior: smooth;
 }
 
+.meropriatiya {
+    margin-bottom: 80px; /* Размер отступа — можно менять */
+}
 
-
-
+.nashi_uslugi {
+    margin-bottom: 80px;
+}
