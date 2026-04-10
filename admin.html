@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        input, textarea { display: block; width: 300px; margin-bottom: 10px; padding: 8px; }
+        button { padding: 10px 20px; cursor: pointer; background: #3ecf8e; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Добавить данные в базу</h1>
+    <input type="text" id="userName" placeholder="Имя пользователя">
+    <textarea id="userText" placeholder="Текст отзыва/сообщения"></textarea>
+    <button onclick="sendToDatabase()">Опубликовать</button>
+
+    <script>
+        // 1. ЗАМЕНИТЕ ЭТИ ДАННЫЕ (Возьмите в Settings -> API)
+        const SB_URL = 'https://regfbsagtfysugdqfazq.supabase.co';
+        const SB_KEY = 'sb_publishable_kDWSt0z2z19cWzYumbQSNA_1MoeYzV7';
+
+        const supabaseClient = supabase.createClient(SB_URL, SB_KEY);
+
+        async function sendToDatabase() {
+            const name = document.getElementById('userName').value;
+            const text = document.getElementById('userText').value;
+
+            const { data, error } = await supabaseClient
+                .from('reviews')
+                .insert([{ name: name, review_text: text }]);
+
+            if (error) {
+                alert('Ошибка: ' + error.message);
+            } else {
+                alert('Готово! Данные улетели в базу.');
+                document.getElementById('userName').value = '';
+                document.getElementById('userText').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
