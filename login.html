@@ -1,30 +1,126 @@
-<!DOCTYPE html>
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Вход / Регистрация</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | Гончарная мастерская</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .auth-form { background: #1e1e1e; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 320px; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #333; border-radius: 6px; background: #252525; color: white; box-sizing: border-box; }
-        button { width: 100%; padding: 12px; margin-top: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        .btn-reg { background: #3ecf8e; color: white; }
-        .btn-reg:hover { background: #34b27b; }
-        .btn-login { background: transparent; color: #3ecf8e; border: 1px solid #3ecf8e; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a0603a; 
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+  
+        .auth-card {
+            background: #964b00;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 350px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        input:focus {
+            border-color: #e77e3d;
+        }
+
+  
+        .btn-main {
+            background-color: orange; 
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-main:hover {
+            background-color: #FDAE3C;
+        }
+
+
+        .btn-sub {
+            background: none;
+            border: 1px solid #e77e3d;
+            color: #e77e3d;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .btn-sub:hover {
+            background: rgba(231, 126, 61, 0.1);
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #f5f5dc;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
-    <div class="auth-form">
-        <h2>Мастерская</h2>
-        <input type="email" id="email" placeholder="Ваш Email">
+
+    <div class="auth-card">
+        <h2>Личный кабинет</h2>
+        
+        <input type="email" id="email" placeholder="Email">
         <input type="password" id="password" placeholder="Пароль">
-        <button class="btn-reg" onclick="signUp()">Зарегистрироваться</button>
-        <button class="btn-login" onclick="signIn()">Уже есть аккаунт? Войти</button>
+        
+        <button class="btn-main" onclick="signIn()">Войти</button>
+        <button class="btn-sub" onclick="signUp()">Зарегистрироваться</button>
+        
+        <div class="info">
+            Гончарная мастерская<br>Творческое пространство
+        </div>
     </div>
 
     <script>
-        // Ваши данные из Settings -> API
         const SB_URL = 'https://regfbsagtfysugdqfazq.supabase.co';
         const SB_KEY = 'sb_publishable_kDWSt0z2z19cWzYumbQSNA_1MoeYzV7';
 
@@ -33,20 +129,17 @@
         async function signUp() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            const { data, error } = await _supabase.auth.signUp({ email, password });
-            if (error) alert('Ошибка: ' + error.message);
-            else alert('Регистрация успешна! Теперь вы можете войти.');
+            const { error } = await _supabase.auth.signUp({ email, password });
+            if (error) alert(error.message);
+            else alert('Регистрация успешна!');
         }
 
         async function signIn() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            const { data, error } = await _supabase.auth.signInWithPassword({ email, password });
-            if (error) alert('Ошибка: ' + error.message);
-            else {
-                alert('С возвращением!');
-                window.location.href = 'index.html'; // Перекидываем на главную
-            }
+            const { error } = await _supabase.auth.signInWithPassword({ email, password });
+            if (error) alert(error.message);
+            else window.location.href = 'profile.html';
         }
     </script>
 </body>
