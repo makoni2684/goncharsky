@@ -889,7 +889,7 @@ scroll-behavior: smooth;
 }
 
 .meropriatiya {
-    margin-bottom: 80px; /* Размер отступа — можно менять */
+    margin-bottom: 80px;
 }
 
 .nashi_uslugi {
@@ -923,7 +923,6 @@ scroll-behavior: smooth;
     padding-bottom: 5px;
 }
 
-/* Стиль для блока личной информации */
 .profile-info p {
     margin-bottom: 10px;
     font-size: 16px;
@@ -933,7 +932,7 @@ scroll-behavior: smooth;
     color: #2c3e50;
 }
 
-/* Стиль для таблицы заказов */
+
 .orders-table {
     width: 100%;
     border-collapse: collapse;
@@ -973,7 +972,7 @@ scroll-behavior: smooth;
         color: #721c24;
     }
 
-/* Стиль для блока занятий */
+
 .classes-list {
     display: flex;
     flex-direction: column;

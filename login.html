@@ -139,7 +139,7 @@
             const password = document.getElementById('password').value;
             const { error } = await _supabase.auth.signInWithPassword({ email, password });
             if (error) alert(error.message);
-            else window.location.href = 'profile.html';
+            else window.location.href = 'lichniy cabinet.html';
         }
     </script>
 </body>
